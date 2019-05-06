@@ -1,0 +1,138 @@
+###########################################################################
+===========================================================================
+-------------------------Inglenook Sidings Program-------------------------
+------------------------------------OOT4-----------------------------------
+===========================================================================
+###########################################################################
+
+I. File List
+------------                                                   ------------
+C-Server Program(Signal Box)                                   ============
+------------                                                   ------------
+1.  signalboxmain.c  	      contains c 'main' method.
+2.  server.c         	      calls 'bootserver' method to start up server.
+3.  yard.c           	      represents Railway/Shunting yard.
+6.  impsrc.h		      Implemented Functions Header file.
+7.  incsrc.h		      C Libraries header file.
+------------                                                   ------------
+C++-Client Program(Sidings Logistics)                          ============
+------------                                                   ------------
+1.  sidingslogisticsmain.cpp  contains c++ 'main' method.
+2.  client.cpp                calls 'bootclient' method to connect to SBP*.
+3.  filereader.cpp            handles reading in files.
+4.  siding.cpp                represents a siding.
+5.  wagon.cpp                 represents a wagon.
+6.  vehicle.cpp               created by Neal Snooke.
+7.  client.hpp                links to 'client.cpp'.
+8.  filereader.hpp            links to 'filereader.cpp'.
+9.  siding.hpp                links to 'siding.cpp'.
+10. wagon.hpp                 links to 'wagons.cpp'.
+11. vehicle.hpp               created by Neal Snooke, (vehicle.h).
+------------                                                   ------------
+*Signal Box Program                                            ============
+------------                                                   ------------
+===========================================================================
+###########################################################################
+
+II. Compiling and Running
+------------
+We can compile both programs and run them in linux by using 'gcc'. Open two
+separate terminals, one for the SBP and one for the SLP*. For the SBP type 
+in the following steps:
+------------
+1. Note down the location of the *.c extension files.
+
+2. Using 'ls' to see the contents of the current directory, and 'cd' to
+   move in to a directory, navigate in to the location of the *.c
+   extensions.
+
+3. Once in the directory, type in the following command and press enter:
+
+	gcc signalboxmain.c -o signalboxmain server.c yard.c
+
+4. The code should be compiled. If permission is asked for, use 'sudo' in
+   front of the command above.
+
+5. Follow the same steps to find the the location of the *.cpp extension
+   files in the SLP, in the second terminal. Once in its location type the 
+   following command as one line and press enter:
+	
+	g++ sidingslogisticsmain.cpp -o sidingslogisticsmain 
+      	filereader.cpp client.cpp siding.cpp vehicle.cpp wagon.cpp
+
+The two programs can be executed by using:
+	
+	./signalboxmain or ./sidingslogisticsmain
+------------                                                   ------------
+*Sidings Logistics Program                                     ============
+------------                                                   ------------
+===========================================================================
+###########################################################################
+
+III. Included Libraries
+------------
+This project uses the Boost libraries, the socket libraries and, standard
+c and c++ libraries.
+---------------------------------------------------------------------------
+===========================================================================
+---------------------------------------------------------------------------
+1.  stdio.h						      
+2.  stdlib.h                                                   
+3.  stdbool.h
+4.  vector                                                  
+5.  string.h
+6.  cstring
+7.  string                                                   
+8.  errno.h                                                    
+9.  sys/types.h                                                
+10. sys/socket.h                                               
+11. netinet/in.h
+12. arpa/inet.h                                     
+13. netdb.h                                                    
+14. unistd.h
+15. iostream>
+16. fstream
+17. sstream
+------------                                                   ------------
+Boost Libraries                                                ============
+------------                                                   ------------
+18. boost/tokenizer.hpp
+19. boost/foreach.hpp
+20. sstream
+---------------------------------------------------------------------------
+===========================================================================
+###########################################################################
+---------------------------------------------------------------------------
+
+------------
+Other Notes:
+------------
+This program is able to read files in a certain format. In the case of the
+problem, the c program can ONLY handle four sidings, including the head
+siding, with fixed capacities of three, five, three and three wagons in 
+each siding respectively. Also, the c program can only handle a maximum
+of 8 wagons.
+
+look at wagon_positions.txt and wagon_data.txt to see an example. These 
+files have been hard coded in to the SLP so, create your new file to look
+like them (careful of putting spaces in the wrong area), rename the hard
+coded file to something else, then rename your new file to the previous
+name of the hard coded file.
+(Each line in wagon_positions.txt is a siding, currently the SBP can handle
+up to four).
+
+Make sure the new file is in the SLP project folder.
+
+The C++ project can read in any number of sidings and wagons but, because
+the server is not as flexible, ensure that when creating a new txt file
+setup of wagons, you keep this in mind.
+
+The SLP uses a first in last out principle. If you want a wagon to be the
+first out after initializing, make sure it is more towards the right of
+each line, behind wagons that  would be at the back of a siding in relation
+to it.
+
+The more flexible c server is a work in progress.
+---------------------------------------------------------------------------
+###########################################################################
+###########################################################################

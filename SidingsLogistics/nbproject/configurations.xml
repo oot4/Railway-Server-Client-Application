@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>client.hpp</itemPath>
+      <itemPath>filereader.hpp</itemPath>
+      <itemPath>incsrc.hpp</itemPath>
+      <itemPath>siding.hpp</itemPath>
+      <itemPath>vehicle.hpp</itemPath>
+      <itemPath>wagon.hpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>client.cpp</itemPath>
+      <itemPath>filereader.cpp</itemPath>
+      <itemPath>siding.cpp</itemPath>
+      <itemPath>sidingslogisticsmain.cpp</itemPath>
+      <itemPath>vehicle.cpp</itemPath>
+      <itemPath>wagon.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <commandlineTool>gcc</commandlineTool>
+        </cTool>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/local/boost_1_62_0/boost_debug/include</pElem>
+            <pElem>/usr/local/boost_1_62_0/boost_debug/lib</pElem>
+          </incDir>
+          <warningLevel>2</warningLevel>
+        </ccTool>
+      </compileType>
+      <item path="client.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="client.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="filereader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="filereader.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="incsrc.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="siding.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="siding.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sidingslogisticsmain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="vehicle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="vehicle.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wagon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="wagon.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>/usr/local/boost_1_62_0/boost_release/include</pElem>
+            <pElem>/usr/local/boost_1_62_0/boost_release/lib</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="client.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="client.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="filereader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="filereader.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="incsrc.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="siding.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="siding.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="sidingslogisticsmain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="vehicle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="vehicle.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="wagon.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="wagon.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
